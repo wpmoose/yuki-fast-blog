@@ -172,6 +172,13 @@ if ( ! function_exists( 'yuki_fast_blog_footer_middle_row_elements' ) ) {
 }
 add_filter( 'yuki_footer_middle_row_default_value', 'yuki_fast_blog_footer_middle_row_elements' );
 
+if ( ! function_exists( 'yuki_fast_blog_copyright_text' ) ) {
+	function yuki_fast_blog_copyright_text() {
+		return 'Copyright &copy; {current_year} &nbsp;&nbsp; {about_theme} Designed By {author_text}';
+	}
+}
+add_filter( 'yuki_default_copyright_text', 'yuki_fast_blog_copyright_text' );
+
 //
 // Header top row
 //
@@ -268,9 +275,6 @@ if ( ! function_exists( 'yuki_fast_blog_primary_navbar_row_border_bottom' ) ) {
 	}
 }
 add_filter( 'yuki_header_primary_navbar_row_border_bottom_default_value', 'yuki_fast_blog_primary_navbar_row_border_bottom' );
-
-// overlay
-//add_filter( 'yuki_header_primary_navbar_row_overlay_default_value', 'yuki_fast_blog_return_yes' );
 
 if ( ! function_exists( 'yuki_fast_blog_primary_navbar_row_overlay_opacity' ) ) {
 	function yuki_fast_blog_primary_navbar_row_overlay_opacity() {
